@@ -4,7 +4,7 @@
 
 > Weather app is a desktop-only app where user can search and get the current weather condition of any city. Is built by fetching data from the open weather API.
 
-![screenshot](./screenshot.png)
+![screenshot](./Screenshot.png)
 
 ## Built With
 
