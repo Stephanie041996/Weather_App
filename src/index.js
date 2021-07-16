@@ -1,5 +1,5 @@
 import CurrentLocation from './CurrentLocation.js';
-import displayError from './domFunctions.js';
+import {displayError, updateScreenReaderConfirmation} from './domFunctions.js';
 import { setLocationObject, getHomeLocation } from './dataFunctions.js';
 
 const currentLoc = new CurrentLocation();
@@ -12,6 +12,12 @@ const homeButton = document.getElementById("home");
 homeButton.addEventListener("click", loadWeather);
 const saveButton = document.getElementById("saveLocation");
 saveButton.addEventListener("click", saveLocation);
+const unitButton = document.getElementById("unit");
+unitButton.addEventListener("click", setUnitPref);
+const refreshButton = document.getElementById("refresh");
+  refreshButton.addEventListener("click", refreshWeather);
+  const locationEntry = document.getElementById("searchBar__form");
+  locationEntry.addEventListener("submit", submitNewLocation);
 // set up 
 
 //load weather
@@ -76,8 +82,38 @@ const loadWeather = (event) => {
   }
 
 
+  const saveLocation = () => {
+    if (currentLoc.getLat() && currentLoc.getLon()) {
+      const saveIcon = document.querySelector(".fa-save");
+      
+      const location = {
+        name: currentLoc.getName(),
+        lat: currentLoc.getLat(),
+        lon: currentLoc.getLon(),
+        unit: currentLoc.getUnit()
+      };
+      localStorage.setItem("defaultWeatherLocation", JSON.stringify(location));
+      updateScreenReaderConfirmation(
+        `Saved ${currentLoc.getName()} as home location.`
+      );
+    }
+  };
+
+  const setUnitPref = () => {
+    const unitIcon = document.querySelector(".fa-chart-bar");
+    // addSpinner(unitIcon);
+    currentLoc.toggleUnit();
+    updateDataAndDisplay(currentLoc);
+  };
+  
+  const refreshWeather = () => {
+    const refreshIcon = document.querySelector(".fa-sync-alt");
+    // addSpinner(refreshIcon);
+    updateDataAndDisplay(currentLoc);
+  };
   
 
+  
 const updateDataAndDisplay = async (locationObj) => {
     // const weatherJson = await getWeatherFromCoords(locationObj);
     // if (weatherJson) updateDisplay(weatherJson, locationObj);
