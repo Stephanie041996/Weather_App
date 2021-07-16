@@ -1,5 +1,5 @@
 import CurrentLocation from './CurrentLocation.js';
-import {setPlaceholderText, displayError, updateScreenReaderConfirmation, displayError, updateDisplay} from './domFunctions.js';
+import {setPlaceholderText, updateScreenReaderConfirmation, displayError, updateDisplay} from './domFunctions.js';
 import { setLocationObject, getHomeLocation, getWeatherFromCoords, getCoordsFromApi, cleanText} from './dataFunctions.js';
 
 const currentLoc = new CurrentLocation();
@@ -16,7 +16,7 @@ const unitButton = document.getElementById("unit");
 unitButton.addEventListener("click", setUnitPref);
 const refreshButton = document.getElementById("refresh");
   refreshButton.addEventListener("click", refreshWeather);
-  const locationEntry = document.getElementById("searchBar__form");
+  const locationEntry = document.getElementById("searchBar_form");
   locationEntry.addEventListener("submit", submitNewLocation);
 // set up 
 setPlaceholderText();

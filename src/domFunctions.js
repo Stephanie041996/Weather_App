@@ -1,5 +1,5 @@
 export const setPlaceholderText = () => {
-    const input = document.getElementById("searchBar__text");
+    const input = document.getElementById("searchBar_text");
     window.innerWidth < 400
       ? (input.placeholder = "City, State, Country")
       : (input.placeholder = "City, State, Country, or Zip Code");
@@ -124,7 +124,7 @@ const buildScreenReaderWeather = (weatherJson, locationObj) => {
   };
 
   const setFocusOnSearch = () => {
-    document.getElementById("searchBar__text").focus();
+    document.getElementById("searchBar_text").focus();
   };
 
   const createCurrentConditionsDivs = (weatherObj, unit) => {
@@ -247,7 +247,7 @@ const createElem = (elemType, divClassName, divText, unit) => {
   };
 
   const displayCurrentConditions = (currentConditionsArray) => {
-  const ccContainer = document.getElementById("currentForecast__conditions");
+  const ccContainer = document.getElementById("currentForecast_conditions");
   currentConditionsArray.forEach((cc) => {
     ccContainer.appendChild(cc);
   });

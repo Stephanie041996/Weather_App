@@ -14,11 +14,11 @@ setName(name){
     this._name = name;
 }
 
-getLet(){
+getLat(){
     return this._lat; 
  }
  
- setLet(lat){
+ setLat(lat){
      this._lat = lat;
  }
 
