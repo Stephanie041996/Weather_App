@@ -10,7 +10,8 @@ const geoButton = document.getElementById("getLocation");
 geoButton.addEventListener("click", getGeoWeather);
 const homeButton = document.getElementById("home");
 homeButton.addEventListener("click", loadWeather);
-
+const saveButton = document.getElementById("saveLocation");
+saveButton.addEventListener("click", saveLocation);
 // set up 
 
 //load weather
@@ -74,6 +75,8 @@ const loadWeather = (event) => {
 
   }
 
+
+  
 
 const updateDataAndDisplay = async (locationObj) => {
     // const weatherJson = await getWeatherFromCoords(locationObj);
