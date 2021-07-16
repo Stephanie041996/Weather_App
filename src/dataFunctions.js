@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 const WEATHER_API_KEY = 'daa924b1f6a30f8b2c6d65530ac6a787';
 
 export const setLocationObject = (locationObj, coordsObj) => {

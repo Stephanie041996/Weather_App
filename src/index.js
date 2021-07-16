@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-undef */
+/* eslint-disable no-use-before-define */
 import CurrentLocation from './CurrentLocation.js';
 import {
   setPlaceholderText, updateScreenReaderConfirmation, displayError, updateDisplay,

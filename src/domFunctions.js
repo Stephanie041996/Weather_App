@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-expressions */
 export const setPlaceholderText = () => {
   const input = document.getElementById('searchBar_text');
   window.innerWidth < 400
