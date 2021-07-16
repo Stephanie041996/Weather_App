@@ -14,40 +14,41 @@
 </head>
 <body>
     <main>
-        <h1>Weather App</h1>
+       
 <section class="searchBar" id="searchBar">
+  <h1>Weather App</h1>
 <form id="searchBar_form" class="searchBar_form" role="search">
     <label for="searchBar_text">Enter a new location</label>
-    <input type="text" name="" id="searchBar_text" role="searchbox" size="40" autocomplete="off" placeholder="City,State,Country" class="searchBar_text">
-    <button id ="searchBar_button" class="searchBar_button" title="submit Location" aria-label="Enter Zip code or city, state and Country to retrieve weather conditions">
+    <input type="text" id="searchBar_text" role="searchbox" size="40" autocomplete="off" placeholder="City,State,Country" class="searchBar_text">
+    <button type="submit" id="searchBar_button" class="searchBar_button" title="submit Location" aria-label="Enter Zip code or city, state and Country to retrieve weather conditions">
         <i class="fa fa-search"></i>
     </button>
 </form>
 
 </section>
 
-<section class="currentForecast" id="currentForecast" role="region" aria-labelledby="currentForecast_location">
+<section class="currentForecast" id="currentForecast"  aria-labelledby="currentForecast_location">
     <h2 id="currentForecast_location" class="currentForecast_location">Current Conditions</h2>
 <div id="currentForecast_conditions" class="currentForecast_conditions"></div>
 </section>
     <nav id="navButtons" class="navButtons">
-        <button id="getLocation" class="button" title="Get Location" aria-label="Get the current weather conditions for your current loaction">
+        <button type="submit" id="getLocation" class="button" title="Get Location" aria-label="Get the current weather conditions for your current loaction">
             <i class="fas fa-map-marker-alt"></i>
 
         </button>
-        <button id="home" class="button" title="Home weather" aria-label="Get the current weather conditions for your home loaction">
+        <button type="submit" id="home" class="button" title="Home weather" aria-label="Get the current weather conditions for your home loaction">
             <i class="fas fa-home"></i>
             
         </button>
-        <button id="saveLocation" class="button" title="Save Location" aria-label="save the current location as your home loaction">
+        <button type="submit"  id="saveLocation" class="button" title="Save Location" aria-label="save the current location as your home loaction">
             <i class="fas fa-save"></i>
             
         </button>
-        <button id="unit" class="button" title="Toggle Measurement" aria-label="Toggle between Measurement units">
+        <button type="submit" id="unit" class="button" title="Toggle Measurement" aria-label="Toggle between Measurement units">
             <i class="fas fa-chart-bar"></i>
             
         </button>
-        <button id="refresh" class="button" title="refresh weather" aria-label="refresh the current weather conditions for your home loaction">
+        <button type="submit" id="refresh" class="button" title="refresh weather" aria-label="refresh the current weather conditions for your home loaction">
             <i class="fas fa-sync-alt"></i>
             
         </button>
@@ -58,7 +59,7 @@
         <div id="dailyForecast_contents" class="dailyForecast_contents"></div>
     </section>
     <p id="confirmation" class="offscreen" aria-live="assertive"></p>
-    </section>
+  
 </main>
 </body>
 </html>
