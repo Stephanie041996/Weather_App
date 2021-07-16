@@ -9,3 +9,7 @@ if (unit){
 
 
 };
+
+export const  getHomeLocation = () => {
+    return localStorage.getItem("defaultWeatherLocation");
+}
