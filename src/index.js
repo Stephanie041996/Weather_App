@@ -114,11 +114,11 @@ const loadWeather = (event) => {
   
   const submitNewLocation = async (event) => {
     event.preventDefault();
-    const text = document.getElementById("searchBar__text").value;
+    const text = document.getElementById("searchBar_text").value;
     const entryText = cleanText(text);
     if (!entryText.length) return;
     const locationIcon = document.querySelector(".fa-search");
-    addSpinner(locationIcon);
+    // addSpinner(locationIcon);
     const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
     if (coordsData) {
       if (coordsData.cod === 200) {
