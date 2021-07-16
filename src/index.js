@@ -1,6 +1,6 @@
 import CurrentLocation from './CurrentLocation.js';
-import {displayError, updateScreenReaderConfirmation, displayError} from './domFunctions.js';
-import { setLocationObject, getHomeLocation, cleanText} from './dataFunctions.js';
+import {setPlaceholderText, displayError, updateScreenReaderConfirmation, displayError} from './domFunctions.js';
+import { setLocationObject, getHomeLocation, getWeatherFromCoords, getCoordsFromApi, cleanText} from './dataFunctions.js';
 
 const currentLoc = new CurrentLocation();
 
@@ -140,9 +140,9 @@ const loadWeather = (event) => {
   };
 
 const updateDataAndDisplay = async (locationObj) => {
-    // const weatherJson = await getWeatherFromCoords(locationObj);
-    // if (weatherJson) updateDisplay(weatherJson, locationObj);
-    console.log(locationObj);
+    const weatherJson = await getWeatherFromCoords(locationObj);
+    if (weatherJson) updateDisplay(weatherJson, locationObj);
+    console.log(weatherJson);
   };
 
 
