@@ -9,7 +9,8 @@ body {
   align-items: center;
 }
 
-.searchBar, h1 {
+.searchBar,
+h1 {
   font-size: 30px;
 }
 
