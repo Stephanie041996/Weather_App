@@ -3,3 +3,16 @@ body {
   padding-right: 300px;
   padding-left: 400px;
 }
+
+.searchBar {
+  text-align: center;
+  align-items: center;
+}
+
+.searchBar, h1 {
+  font-size: 30px;
+}
+
+.currentForecast {
+  text-align: center;
+}

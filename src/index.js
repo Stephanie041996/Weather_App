@@ -12,7 +12,6 @@ import {
 const currentLoc = new CurrentLocation();
 
 const initApp = () => {
-// add listners
   const geoButton = document.getElementById('getLocation');
   geoButton.addEventListener('click', getGeoWeather);
   const homeButton = document.getElementById('home');
@@ -25,9 +24,7 @@ const initApp = () => {
   refreshButton.addEventListener('click', refreshWeather);
   const locationEntry = document.getElementById('searchBar_form');
   locationEntry.addEventListener('submit', submitNewLocation);
-  // set up
   setPlaceholderText();
-  // load weather
   loadWeather();
 };
 
@@ -144,5 +141,4 @@ const submitNewLocation = async (event) => {
 const updateDataAndDisplay = async (locationObj) => {
   const weatherJson = await getWeatherFromCoords(locationObj);
   if (weatherJson) updateDisplay(weatherJson, locationObj);
-  console.log(weatherJson);
 };
