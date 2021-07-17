@@ -100,14 +100,12 @@ const saveLocation = () => {
 
 const setUnitPref = () => {
   const unitIcon = document.querySelector('.fa-chart-bar');
-  // addSpinner(unitIcon);
   currentLoc.toggleUnit();
   updateDataAndDisplay(currentLoc);
 };
 
 const refreshWeather = () => {
   const refreshIcon = document.querySelector('.fa-sync-alt');
-  // addSpinner(refreshIcon);
   updateDataAndDisplay(currentLoc);
 };
 
@@ -117,7 +115,6 @@ const submitNewLocation = async (event) => {
   const entryText = cleanText(text);
   if (!entryText.length) return;
   const locationIcon = document.querySelector('.fa-search');
-  // addSpinner(locationIcon);
   const coordsData = await getCoordsFromApi(entryText, currentLoc.getUnit());
   if (coordsData) {
     if (coordsData.cod === 200) {
