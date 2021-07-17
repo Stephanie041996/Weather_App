@@ -1,0 +1,19 @@
+body {
+  background-color: #75b5ce;
+  padding-right: 300px;
+  padding-left: 400px;
+}
+
+.searchBar {
+  text-align: center;
+  align-items: center;
+}
+
+.searchBar,
+h1 {
+  font-size: 30px;
+}
+
+.currentForecast {
+  text-align: center;
+}
